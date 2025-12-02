@@ -10,7 +10,7 @@ const port = 3333
 app.use(cors())
 app.use(express.json())
 app.get("/", (request, response) => {
-    const searchCommand = "SELECT id, name, email, nickname FROM ronnybezerra_02tb"
+    const searchCommand = "SELECT id, name, email, nickname FROM nikolastchuk_02tb"
 
     database.query(searchCommand, (error, users) => {
         if (error) {
@@ -55,7 +55,7 @@ app.post("/cadastrar", (request, response) => {
     console.log(user)
 
     const insertCommand = `
-        INSERT INTO ronnybezerra_02tb(name, email, password, nickname)
+        INSERT INTO nikolastchuk_02tb(name, email, password, nickname)
         VALUES (?, ?, ?, ?)
     
     `
